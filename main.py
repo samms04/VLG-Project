@@ -1,5 +1,5 @@
 from glob import glob
-from image_utils import image_utils
+from image_utils import utils
 
 
 
