@@ -12,7 +12,7 @@ class utils:
     def __init__(self):
         return None
     
-    def enhance_images(self,f):
+    def improve_images(self,f):
         for i in f:
             a=i.split("test\\")
             b=a[1].split(".png")
