@@ -6,7 +6,7 @@ from image_utils import utils
 def main():
     util=image_utils()
     test_imgs=sorted(glob("test/*"))
-    util.enhance_images(test_imgs)
+    util.improve_images(test_imgs)
     high_light_imgs=sorted(glob("high/*"))
     predicted_imgs=sorted(glob("predicted/*"))
     MSE,PSNR=util.AVG_MSE_PSNR(high_light_imgs,predicted_imgs)  
