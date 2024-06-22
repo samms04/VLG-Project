@@ -8,7 +8,7 @@ from PIL import Image
 import cv2
 
 pd=predictor()
-class image_utils:
+class utils:
     def __init__(self):
         return None
     
