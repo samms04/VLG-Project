@@ -12,19 +12,6 @@ class utils:
     def __init__(self):
         return None
     
-    def improve_images(self,f):
-        for i in f:
-            a=i.split("test\\")
-            b=a[1].split(".png")
-            img_name=b[0]
-            img=Image.open(i)
-            eimg=pd.infer(img)
-            eimg_arr=keras.utils.img_to_array(eimg)
-            eimg_arr=eimg_arr/255
-            plt.imsave(f'predicted/{img_name}.png',eimg_arr)
-        
-        return True
-
     def AVG_MSE_PSNR(self,f,p): 
         avg_mse=0
         avg_psnr=0
@@ -46,4 +33,18 @@ class utils:
         avg_mse/=no_of_images
         avg_psnr/=no_of_images
         return avg_mse,avg_psnr 
+
+    def improve_images(self,f):
+        for i in f:
+            a=i.split("test\\")
+            b=a[1].split(".png")
+            img_name=b[0]
+            img=Image.open(i)
+            eimg=pd.infer(img)
+            eimg_arr=keras.utils.img_to_array(eimg)
+            eimg_arr=eimg_arr/255
+            plt.imsave(f'predicted/{img_name}.png',eimg_arr)
+        
+        return True
+
     
